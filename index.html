@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etia's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a onclick="showPage('home')" class="nav-link active">Home</a>
+        <a onclick="showPage('about')" class="nav-link">About Me</a>
+        <a onclick="showPage('websites')" class="nav-link">Websites</a>
+        <a onclick="showPage('projects')" class="nav-link">Projects</a>
+        <a onclick="showPage('contact')" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="page-content">
+            <h1>💖 Etia</h1>
+            <div class="profile-picture">
+                <img src="https://i.postimg.cc/qgnD9Srh/me.jpg" alt="Etia's Profile Picture">
+            </div>
+            <p class="hero-subtitle">Creative Designer & Tech Enthusiast</p>
+            <p class="hero-description">I am passionate about creating beautiful designs and exploring new technologies to build amazing digital experiences.</p>
+        </div>
+    </div>
+
+    <!-- ABOUT ME PAGE -->
+    <div id="about" class="page">
+        <div class="page-content">
+            <h1>About Me 👤</h1>
+
+            <!-- ABOUT CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="about-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">👤</div>
+                        <h3>Who I Am</h3>
+                        <p>My name is Etia. I am a creative student passionate about design, technology, and learning new things every day.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🎨</div>
+                        <h3>What I Do</h3>
+                        <p>I love creating beautiful designs and bringing to life different artworks either digital or handwritten.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🚀</div>
+                        <h3>My Journey</h3>
+                        <p>I'm on an exciting journey of learning design, coding, and creative expression to make a positive impact through my work.</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('about-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('about-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('about-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('about-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('about-carousel', 2)"></span>
+                </div>
+            </div>
+
+            <!-- FAVORITE SUBJECTS -->
+            <h2>My Favorite Subjects 📚</h2>
+            <div class="cards-container">
+                <div class="info-card">
+                    <h4>🎨 Art & Design</h4>
+                    <p>I love art because it allows me to express my creativity and imagination. Design is my passion!</p>
+                </div>
+                <div class="info-card">
+                    <h4>💻 Technology</h4>
+                    <p>Technology facilitates in one way or another our creativity by giving to each and everyone of us, a possibility to bring to life our different ideas and talents and showcase them to the world.</p>
+                </div>
+                <div class="info-card">
+                    <h4>📖 Literature</h4>
+                    <p>I enjoy reading and writing because stories inspire me and help me understand the world better.</p>
+                </div>
+            </div>
+
+            <!-- FAVORITE HOBBIES -->
+            <h2>My Favorite Hobbies 🎯</h2>
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="hobbies-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">🎨</div>
+                        <h3>Digital Art</h3>
+                        <p>Creating digital artwork and exploring different art styles is my favorite way to express myself!</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📸</div>
+                        <h3>Photography</h3>
+                        <p>I love capturing beautiful moments and exploring the world through the lens of a camera.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">✍️</div>
+                        <h3>Writing</h3>
+                        <p>Writing stories and poetry helps me express my thoughts and emotions in creative ways.</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('hobbies-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('hobbies-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('hobbies-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('hobbies-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('hobbies-carousel', 2)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WEBSITES PAGE -->
+    <div id="websites" class="page">
+        <div class="page-content">
+            <h1>My Favorite Websites 🌐</h1>
+            <p style="text-align: center; color: #ff8fb3; margin-bottom: 30px;">Check out these amazing websites that inspire my creativity!</p>
+
+            <!-- WEBSITES CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="websites-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">🎨</div>
+                        <h3>Behance</h3>
+                        <p>Behance is where I find inspiration from amazing designers and artists around the world!</p>
+                        <a href="https://www.behance.net" target="_blank" class="visit-btn">Visit Behance →</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🖼️</div>
+                        <h3>Pinterest</h3>
+                        <p>Pinterest is my go-to place for design inspiration, mood boards, and creative ideas!</p>
+                        <a href="https://www.pinterest.com" target="_blank" class="visit-btn">Visit Pinterest →</a>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🎬</div>
+                        <h3>YouTube</h3>
+                        <p>YouTube helps me learn new design techniques and stay updated with the latest trends!</p>
+                        <a href="https://www.youtube.com" target="_blank" class="visit-btn">Visit YouTube →</a>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('websites-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('websites-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('websites-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('websites-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('websites-carousel', 2)"></span>
+                </div>
+            </div>
+
+            <!-- WEBSITES CARDS -->
+            <h2>Why I Love These Websites 💡</h2>
+            <div class="cards-container">
+                <div class="website-card">
+                    <h4>🎨 Behance - Design Showcase</h4>
+                    <p>Behance is an amazing platform where I discover incredible designs, artwork from all over the world. It inspires me to improve my own creative skills and as well as sharing to the world.</p>
+                    <a href="https://www.behance.net" target="_blank" class="visit-btn">Explore →</a>
+                </div>
+                <div class="website-card">
+                    <h4>🖼️ Pinterest - Inspiration Hub</h4>
+                    <p>Pinterest is perfect for collecting design ideas, color palettes, and visual inspiration. It's my creative mood board! This can also help you find creative and stylish outfit or fashion ideas.</p>
+                    <a href="https://www.pinterest.com" target="_blank" class="visit-btn">Explore →</a>
+                </div>
+                <div class="website-card">
+                    <h4>🎬 YouTube - Learning Platform</h4>
+                    <p>YouTube has countless tutorials on design, art, and creativity. I use it to learn new techniques and stay inspired!</p>
+                    <a href="https://www.youtube.com" target="_blank" class="visit-btn">Explore →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS PAGE -->
+    <div id="projects" class="page">
+        <div class="page-content">
+            <h1>My Projects 🚀</h1>
+
+            <!-- PROJECTS CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="projects-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">🎨</div>
+                        <h3>Digital Art Portfolio</h3>
+                        <p><strong>Description:</strong> Created a collection of digital artworks showcasing different styles and techniques.</p>
+                        <p><strong>Skills Used:</strong> Digital Painting, Color Theory, Composition</p>
+                        <p><strong>Status:</strong> ✅ Completed</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📸</div>
+                        <h3>Photography Project</h3>
+                        <p><strong>Description:</strong> Captured and edited a series of photographs exploring light and shadow.</p>
+                        <p><strong>Skills Used:</strong> Photography, Photo Editing, Visual Storytelling</p>
+                        <p><strong>Status:</strong> ✅ Completed</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📌</div>
+                        <h3>Graphic Design Work</h3>
+                        <p><strong>Description:</strong> Designed logos, posters, and branding materials for various projects.</p>
+                        <p><strong>Skills Used:</strong> Logo Design, Typography, Brand Identity</p>
+                        <p><strong>Status:</strong> ✅ Completed</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">✍️</div>
+                        <h3>Creative Writing</h3>
+                        <p><strong>Description:</strong> Wrote short stories and poetry exploring different themes and emotions.</p>
+                        <p><strong>Skills Used:</strong> Storytelling, Poetry, Creative Expression</p>
+                        <p><strong>Status:</strong> ✅ Completed</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🌟</div>
+                        <h3>Coming Soon...</h3>
+                        <p><strong>Description:</strong> More exciting creative projects coming soon!</p>
+                        <p><strong>Skills:</strong> Animation, Video Editing, Web Design</p>
+                        <p><strong>Status:</strong> 🔄 In Progress</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('projects-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('projects-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('projects-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('projects-carousel', 4)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="page-content">
+            <h1>Get In Touch 📧</h1>
+
+            <!-- CONTACT CAROUSEL -->
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="contact-carousel">
+                    <div class="carousel-slide active">
+                        <div class="emoji">📧</div>
+                        <h3>Email</h3>
+                        <p>Feel free to reach out to me via email for any inquiries or collaborations!</p>
+                        <p><a href="mailto:ineza.etia31@ntare-louisenlund.org" style="color: #ff8fb3; text-decoration: underline;">ineza.etia31@ntare-louisenlund.org</a></p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">📱</div>
+                        <h3>Phone</h3>
+                        <p>You can also contact me by phone. I'd love to hear from you!</p>
+                        <p><a href="tel:+25079639479" style="color: #ff8fb3; text-decoration: underline;">+25079639479</a></p>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="emoji">🎓</div>
+                        <h3>Social Media</h3>
+                        <p>Follow me on social media to see my latest creative work and updates!</p>
+                        <p>Instagram • Twitter • LinkedIn</p>
+                    </div>
+                    <button class="carousel-button prev" onclick="changeSlide('contact-carousel', -1)">❮</button>
+                    <button class="carousel-button next" onclick="changeSlide('contact-carousel', 1)">❯</button>
+                </div>
+                <div class="carousel-controls">
+                    <span class="carousel-dot active" onclick="currentSlide('contact-carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('contact-carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide('contact-carousel', 2)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Etia. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
